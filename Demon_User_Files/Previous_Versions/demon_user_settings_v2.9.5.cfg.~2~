@@ -25,7 +25,7 @@ variable_adaptive_meshing: True                 # Set to use Klipper's Adaptive 
 variable_use_kamp_adaptive_purge: True           # Set True to use KAMP adaptive Purge, or False to use Legacy Static purge 
 variable_use_kamp_smart_park: True               # Set True to use KAMP Smart Park, or False to use build space centre
 
-variable_auto_reset_eddy_offset: False           # When using BTT Eddy without user offset adjustment the value should not be stored, set True to reset it to 0 on PRINT_END
+variable_auto_reset_eddy_offset: False           # When using USB Eddy SET_Z_FROM_PROBE the value should not be stored, set True to reset it to 0 on PRINT_END
 variable_eddy_park_x: 100                        # Set the most stable place on the bed to setup your Eddy probe, compare bed height movement between default & ABS/ASA Heightmaps!
 variable_eddy_park_y: 170                        # Set the most stable place on the bed to setup your Eddy probe, compare bed height movement between default & ABS/ASA Heightmaps!
 
@@ -88,7 +88,7 @@ variable_pla_min_chamber_temp: 18                # The minimum heat soak chamber
 variable_pla_max_chamber_temp: 25                # The maximum printing chamber temperature threshold above which the Chamber Fan activates, if you have one!
 
 variable_pla_bed_fan_enable: False                # Enable Bed Fans for this filament True/False
-variable_pla_bed_fan_cool: False                  # Enable Bed Fans to help cool the bed/chamber after the print finishes True/False
+variable_pla_bed_fan_cool: True                  # Enable Bed Fans to help cool the bed/chamber after the print finishes True/False
 variable_pla_bed_fan_low_speed: 0.25             # Set Bed Fans low speed
 variable_pla_bed_fan_high_speed: 0.60            # Set Bed Fans high speed
 variable_pla_nevermore_start_speed: 1            # Set nevermore speed for initial chamber heating stage
@@ -117,7 +117,7 @@ variable_asa_noz_pre: 180                        # Set Nozzle Pre Heat Temp
 variable_asa_min_chamber_temp: 42                # The minimum heat soak chamber temperature threshold above which printing can start. 
 variable_asa_max_chamber_temp: 55                # The maximum printing chamber temperature threshold above which the Chamber Fan activates, if you have one!
 
-variable_asa_bed_fan_enable: False                # Enable Bed Fans for this filament True/False
+variable_asa_bed_fan_enable: True                # Enable Bed Fans for this filament True/False
 variable_asa_bed_fan_cool: False                 # Enable Bed Fans to help cool the bed/chamber after the print finishes True/False
 variable_asa_bed_fan_low_speed: 0.25             # Set Bed Fans low speed
 variable_asa_bed_fan_high_speed: 0.65            # Set Bed Fans high speed
@@ -188,7 +188,7 @@ variable_petg_min_chamber_temp: 18               # The minimum heat soak chamber
 variable_petg_max_chamber_temp: 35               # The maximum printing chamber temperature threshold above which the Chamber Fan activates, if you have one!
 
 variable_petg_bed_fan_enable: False               # Enable Bed Fans for this filament True/False
-variable_petg_bed_fan_cool: False                 # Enable Bed Fans to help cool the bed/chamber after the print finishes True/False
+variable_petg_bed_fan_cool: True                 # Enable Bed Fans to help cool the bed/chamber after the print finishes True/False
 variable_petg_bed_fan_low_speed: 0.25            # Set Bed Fans low speed
 variable_petg_bed_fan_high_speed: 0.60           # Set Bed Fans high speed
 variable_petg_nevermore_start_speed: 1           # Set nevermore speed for initial chamber heating stage
@@ -210,7 +210,7 @@ variable_petg_top_surface_pa: 0.034              # Set Adaptive Pressure Advance
 ###################################################################################################################################################
 ## PETG ADDITIONAL ################################################################################################################################
 
-variable_petg_anti_squish: False                  # Adjust Z offset for reduced Squish when using PETG True/False
+variable_petg_anti_squish: True                  # Adjust Z offset for reduced Squish when using PETG True/False
 variable_petg_offset: 0.015                      # Use with EXTREME caution!! Manual G-Code Z offset override!    Use a positive offset here!
                                                  
 # NOTE: Range of 0mm to +0.165mm max adjustment, anything outside this will cause EMERGENCY STOP
@@ -227,8 +227,8 @@ variable_tpu_noz_pre: 160                        # Set Nozzle Pre Heat Temp
 variable_tpu_min_chamber_temp: 18                # The minimum heat soak chamber temperature threshold above which printing can start. 
 variable_tpu_max_chamber_temp: 27                # The maximum printing chamber temperature threshold above which the Chamber Fan activates, if you have one!
 
-variable_tpu_bed_fan_enable: False                # Enable Bed Fans for this filament True/False
-variable_tpu_bed_fan_cool: False                  # Enable Bed Fans to help cool the bed/chamber after the print finishes True/False
+variable_tpu_bed_fan_enable: True                # Enable Bed Fans for this filament True/False
+variable_tpu_bed_fan_cool: True                  # Enable Bed Fans to help cool the bed/chamber after the print finishes True/False
 variable_tpu_bed_fan_low_speed: 0.25             # Set Bed Fans low speed
 variable_tpu_bed_fan_high_speed: 0.6             # Set Bed Fans high speed
 variable_tpu_nevermore_start_speed: 1            # Set nevermore speed for initial chamber heating stage
@@ -250,7 +250,7 @@ variable_tpu_top_surface_pa: 0.034               # Set Adaptive Pressure Advance
 ###################################################################################################################################################
 ## TPU ADDITIONAL #################################################################################################################################
 
-variable_tpu_anti_squish: False                   # Adjust Z offset for reduced Squish when using PETG True/False
+variable_tpu_anti_squish: True                   # Adjust Z offset for reduced Squish when using PETG True/False
 variable_tpu_offset: 0.013                       # Use with EXTREME caution!! Manual G-Code Z offset override!    Use a positive offset here!
 
 # NOTE: Range of 0mm to +0.165mm max adjustment, anything outside this will cause EMERGENCY STOP
@@ -269,7 +269,7 @@ variable_default_min_chamber_temp: 20            # The minimum heat soak chamber
 variable_default_max_chamber_temp: 30            # The maximum printing chamber temperature threshold above which the Chamber Fan activates, if you have one!
 
 variable_default_bed_fan_enable: False            # Enable Bed Fans for this filament True/False
-variable_default_bed_fan_cool: False              # Enable Bed Fans to help cool the bed/chamber after the print finishes True/False
+variable_default_bed_fan_cool: True              # Enable Bed Fans to help cool the bed/chamber after the print finishes True/False
 variable_default_bed_fan_low_speed: 0.25         # Set Bed Fans low speed
 variable_default_bed_fan_high_speed: 0.6         # Set Bed Fans high speed
 variable_default_nevermore_start_speed: 1        # Set nevermore speed for initial chamber heating stage
@@ -385,7 +385,7 @@ variable_post_print_cool: 25                     # Set the temp to cool & vent t
 ###################################################################################################################################################
 ## PRINTER HEAT SOAK TIMERS #######################################################################################################################
 
-variable_lo_temp_timer: 5                       # Set the heat soak timer for low temp filaments - NOT used if "chamber_temp_wait" is set to "True"
+variable_lo_temp_timer: 10                       # Set the heat soak timer for low temp filaments - NOT used if "chamber_temp_wait" is set to "True"
 variable_hi_temp_timer: 15                       # Set the heat soak timer for high temp filaments - NOT used if "chamber_temp_wait" is set to "True"
 
 ###################################################################################################################################################
@@ -410,7 +410,7 @@ variable_heater_high: 90                         # Chamber heater highest heater
 ###################################################################################################################################################
 ## NEVERMORE POST PRINT ###########################################################################################################################
 
-variable_nevermore_asa_abs_only: True            # Only run the post print timers for ASA & ABS filament prints
+variable_nevermore_asa_abs_only: False            # Only run the post print timers for ASA & ABS filament prints
 variable_nevermore_post_speed: 0.6               # Set Nevermore fan speed for when the print is finished 0.0-1.0
 variable_nevermore_post_run_time: 5              # Set the amount of time to run the Nevermore post print filtration timer
 variable_nevermore_post_timer: True              # Set True/False to run the post print filtration timer after the print or not
@@ -483,8 +483,8 @@ variable_nevermore: False                        # Do you have a Nevermore Fan s
 variable_shutdown_relay: False                   # Do you have a Moonraker Power Device Shutdown Relay True/False
 variable_printer_lights: False                   # Do you have controlable lights on your printer True/False
 variable_neopixel_led: False                     # Do you have addressable NeoPixel LED's separate from any LED Effects systems True/False
-variable_nozzle_cleaner: True                   # Do you have a nozzle cleaner brush/srubber True/False
-variable_purge_bucket: False                     # Do you have a purge bucket
+variable_nozzle_cleaner: False                   # Do you have a nozzle cleaner brush/srubber True/False
+variable_purge_bucket: True                     # Do you have a purge bucket
 variable_aes_system: False                       # Do you have the Demon Auto Emergency Stop System True/False
 
 # AUTO EMERGENCY STOP SYSTEM Full instructions are available here: https://github.com/3DPrintDemon/Voron_2.4_AES_System_Auto_Emergency_Stop_For_Z_Endstop_Switch
